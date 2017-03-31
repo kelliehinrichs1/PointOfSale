@@ -12,7 +12,7 @@ function addItem()
   // THEN show an alert: "Enter price as a number"
   else
   {
-    newItem = number(newItem);
+    newItem = Number(newItem);
     runningTotal = newItem + runningTotal;
     var dollars;
     dollars = asCurrency(runningTotal);
