@@ -65,6 +65,7 @@ function calculateReceipt()
   var = receiptTax;
   var = receiptTotal;
 
+  receiptSubtotal = getCookie("preTax");
   receiptSubtotal = Number(receiptSubtotal);
   receiptTax = receiptSubtotal * 0.075;
   receiptTotal = receiptSubtotal + receiptTax;
