@@ -10,6 +10,16 @@ function addItem()
   }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
+  else
+  {
+    newItem = number(newItem);
+    runningTotal = newItem + runningTotal;
+    var dollars;
+    dollars = asCurrency(runningTotal);
+    document.getElementById("subtotal").innerHTML = dollars;
+    document.getElementById("price").value = " ";
+    setCookie("preTax", runningTotal);
+  }
   //OTHERWISE,
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
